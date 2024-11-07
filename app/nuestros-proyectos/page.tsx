@@ -1,10 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import ImageModal from "./ImageModal"; // Asegúrate de importar el modal correctamente
+import Image from "next/image";
 
 export default function NuestrosProyectos() {
   const router = useRouter();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const proyectos = [
     {
@@ -67,7 +70,7 @@ export default function NuestrosProyectos() {
         <span className="text-red-600">Nuestros </span>
         <span className="text-blue-600">Proyectos</span>
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {proyectos.map((proyecto) => (
           <div key={proyecto.id} className="bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105">
@@ -85,7 +88,8 @@ export default function NuestrosProyectos() {
                     alt={`${proyecto.nombre} - Foto ${index + 1}`}
                     width={300}
                     height={200}
-                    className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                    className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+                    onClick={() => setSelectedImage(foto)}
                   />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                 </div>
@@ -94,6 +98,14 @@ export default function NuestrosProyectos() {
           </div>
         ))}
       </div>
+
+      {/* Modal de Imagen */}
+      {selectedImage && (
+        <ImageModal
+          imageUrl={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
 
       {/* Botón de Volver al Inicio */}
       <div className="flex justify-center mt-12">
