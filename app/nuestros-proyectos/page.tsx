@@ -45,7 +45,7 @@ export default function NuestrosProyectos() {
       nombre: "Proyecto Residencia Las Hermanitas",
       descripcion: "Descripción del Proyecto Residencia Las Hermanitas",
       fotos: [
-        "/Hermanitas/herma1.jpeg",
+        "/Hermanitas/herrma1.jpeg",
         "/Hermanitas/herma2.jpeg",
         "/Hermanitas/herma3.jpeg",
       ],
@@ -98,7 +98,7 @@ export default function NuestrosProyectos() {
       {/* Botón de Volver al Inicio */}
       <div className="flex justify-center mt-12">
         <button
-          onClick={() => router.push("/")}  // Cambia "/" a la ruta de inicio si es diferente
+          onClick={() => router.push("/")}
           className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
         >
           Volver al Inicio

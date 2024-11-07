@@ -7,6 +7,7 @@ module.exports = {
       'safety-construction.com',
       '3fconstructora.com.pe',
       'encrypted-tbn0.gstatic.com',
+      'cdn-icons-png.freepik.com', 
     ],
   },
 };

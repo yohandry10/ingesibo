@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const socialMedia = [
@@ -75,56 +76,41 @@ export default function Footer() {
       ),
     },
     {
-      name: 'LinkedIn',
-      href: 'https://www.linkedin.com/',
+      name: 'WhatsApp',
+      href: 'https://wa.me/123456789',
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+        <Image
+          src="https://cdn-icons-png.freepik.com/256/3991/3991765.png"
+          alt="WhatsApp Icon"
+          width={24}
+          height={24}
           className="w-6 h-6"
-        >
-          <path
-            d="M22.23 0H1.77C.79 0 0 .774 0 
-            1.728v20.543C0 23.226.79 24 1.77 
-            24h20.46c.98 0 1.77-.774 
-            1.77-1.729V1.728C24 .774 23.21 
-            0 22.23 0zM7.09 20.452H3.56V9h3.53v11.452zM5.325 
-            7.432a2.04 2.04 0 1 1 .001-4.081 
-            2.04 2.04 0 0 1-.001 4.081zM20.452 
-            20.452h-3.532v-5.605c0-1.336-.025
-            -3.055-1.863-3.055-1.863 0-2.148 
-            1.453-2.148 2.953v5.707H9.377V9h3.392
-            v1.561h.048c.472-.894 1.623-1.833 
-            3.341-1.833 3.572 0 4.229 2.351 
-            4.229 5.406v6.318z"
-          />
-        </svg>
+        />
       ),
     },
-    // Agrega más redes sociales si lo deseas
   ]
 
   const navigation = [
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Sobre Nosotros', href: '#sobre-nosotros' },
+    { name: 'Proyectos', href: '#proyectos' },
     { name: 'Contacto', href: '#contacto' },
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-white">
       <div id="contacto" className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-start">
-          {/* Logo y descripción */}
           <div className="mb-8 md:mb-0 md:w-1/3">
             <Link href="#inicio">
-              <span className="cursor-pointer">
-                <img
+              <span className="cursor-pointer inline-block relative overflow-hidden rounded-full bg-white p-2">
+                <Image
                   src="/logo.jpeg"
                   alt="INGESIBO Logo"
-                  width={150}
-                  height={50}
+                  width={100}
+                  height={100}
+                  className="rounded-full transition-transform duration-300 hover:scale-105 grayscale hover:grayscale-0"
                 />
               </span>
             </Link>
@@ -132,15 +118,13 @@ export default function Footer() {
               INGESIBO: Comprometidos con la excelencia y la seguridad en cada proyecto.
             </p>
           </div>
-
-          {/* Menú de navegación */}
           <div className="mb-8 md:mb-0 md:w-1/3">
             <h3 className="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href}>
-                    <span className="footer-link cursor-pointer">
+                    <span className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer">
                       {item.name}
                     </span>
                   </Link>
@@ -148,8 +132,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Contacto y Redes Sociales */}
           <div className="md:w-1/3">
             <h3 className="text-xl font-semibold mb-4">Contáctanos</h3>
             <p className="text-gray-400 mb-4">
@@ -165,25 +147,18 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon relative group overflow-hidden"
+                  className="relative group"
                   aria-label={social.name}
                 >
-                  <span className="flex items-center justify-center w-10 h-10 relative overflow-hidden">
-                    <span className="absolute inset-0 bg-red-600 rounded-full transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>
-                    <span className="relative text-white group-hover:text-white transition-colors duration-500 ease-out">
-                      {social.icon}
-                    </span>
+                  <span className="flex items-center justify-center w-10 h-10 relative overflow-hidden rounded-full bg-gray-800 hover:bg-red-600 transition duration-300">
+                    {social.icon}
                   </span>
                 </a>
               ))}
             </div>
           </div>
         </div>
-
-        {/* Línea divisoria */}
         <div className="mt-12 border-t border-gray-700" />
-
-        {/* Derechos reservados */}
         <p className="mt-6 text-center text-gray-500">
           &copy; {new Date().getFullYear()} INGESIBO. Todos los derechos reservados.
         </p>
@@ -191,3 +166,4 @@ export default function Footer() {
     </footer>
   )
 }
+

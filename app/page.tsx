@@ -8,6 +8,8 @@ import ClientsSection from './ClientsSection'
 import Footer from './Footer'
 import Link from 'next/link'
 import NuestrosProyectos from './nuestros-proyectos/page'
+import WhatsAppButton from './WhatsAppButton' // Importar el botón flotante de WhatsApp
+
 export default function HomePage() {
   return (
     <>
@@ -36,6 +38,7 @@ export default function HomePage() {
         <ClientsSection />
       </div>
       <Footer />
+      <WhatsAppButton /> {}
     </>
   )
 }

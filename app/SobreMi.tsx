@@ -122,7 +122,7 @@ export default function SobreMi() {
           {/* Imagen final */}
           <div className="relative mt-16 rounded-3xl overflow-hidden">
             <Image
-              src="/sistemas-contra-incendios.jpg"
+              src="/female.jpg"
               alt="Sistemas contra incendios"
               width={1200}
               height={400}
