@@ -135,10 +135,11 @@ export default function Footer() {
           <div className="md:w-1/3">
             <h3 className="text-xl font-semibold mb-4">Contáctanos</h3>
             <p className="text-gray-400 mb-4">
-              Dirección: Av. Ejemplo 123, Ciudad, País
+            Oficina: Mza. F Lote. 1 Apv. Manuel Aquino
+            Callao 
             </p>
-            <p className="text-gray-400 mb-4">Teléfono: +51 123 456 789</p>
-            <p className="text-gray-400 mb-6">Email: info@ingesibo.com</p>
+            <p className="text-gray-400 mb-4">Teléfono: +51981468905 </p>
+            <p className="text-gray-400 mb-6">Email: ingesiboperusac@gmail.com</p>
 
             <div className="flex space-x-4">
               {socialMedia.map((social) => (
