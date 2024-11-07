@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function WhatsAppButton() {
   return (
     <Link
-      href="https://wa.me/123456789" // Reemplaza con tu número de WhatsApp
+      href="https://wa.me/+51981468905 " // Reemplaza con tu número de WhatsApp
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 z-50"
