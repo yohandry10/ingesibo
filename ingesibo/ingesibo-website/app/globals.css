@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy-900: #1e3a8a;
+    --color-red-600: #dc2626;
+  }
+}
+
+@layer utilities {
+  .bg-navy-900 {
+    background-color: var(--color-navy-900);
+  }
+  .text-navy-900 {
+    color: var(--color-navy-900);
+  }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
+  }
+}
+
+/* Estilos del enlace del navbar */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-link .relative.z-10 {
+  position: relative;
+  z-index: 10;
+  color: #6b7280; /* text-gray-700 */
+  transition: color 0.3s ease;
+}
+
+.nav-link .bg-red-600 {
+  position: absolute;
+  inset: 0;
+  background-color: #dc2626;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 9;
+}
+
+.nav-link:hover .bg-red-600 {
+  transform: translateY(0);
+}
+
+.nav-link:hover .relative.z-10 {
+  color: #ffffff; /* text-white */
+}
+
+/* Estilos del enlace del navbar móvil */
+.nav-link-mobile {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-link-mobile .relative.z-10 {
+  position: relative;
+  z-index: 10;
+  color: #6b7280; /* text-gray-700 */
+  transition: color 0.3s ease;
+}
+
+.nav-link-mobile .bg-red-600 {
+  position: absolute;
+  inset: 0;
+  background-color: #dc2626;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 9;
+}
+
+.nav-link-mobile:hover .bg-red-600 {
+  transform: translateY(0);
+}
+
+.nav-link-mobile:hover .relative.z-10 {
+  color: #ffffff; /* text-white */
+}
+
+/* Estilos del enlace del footer */
+.footer-link {
+  position: relative;
+  color: #9ca3af; /* text-gray-400 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff; /* text-white */
+}
+
+/* Estilos para el efecto hover de los íconos de redes sociales */
+.social-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #6b7280; /* Border color */
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #dc2626; /* Color de relleno */
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s ease-out;
+}
+
+.social-icon:hover::before {
+  transform: scaleY(1);
+}
+
+.social-icon svg {
+  position: relative;
+  z-index: 10;
+  color: #ffffff; /* Color del ícono */
+  transition: color 0.5s ease-out;
+}
+
+.social-icon:hover svg {
+  color: #ffffff; /* Color del ícono al hacer hover */
+}
+.clients-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.clients-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.clients-section .text-red-600 {
+  color: #dc2626;
+}
+
+.clients-section .hover:scale-105 {
+  transition: transform 0.3s ease-in-out;
+}
