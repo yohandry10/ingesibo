@@ -138,8 +138,8 @@ export default function Footer() {
             Oficina: Mza. F Lote. 1 Apv. Manuel Aquino
             Callao 
             </p>
-            <p className="text-gray-400 mb-4">Teléfono: +51981468905 </p>
-            <p className="text-gray-400 mb-6">Email: ingesiboperusac@gmail.com</p>
+            <p className="text-gray-400 mb-4">Teléfono: +51955773469 & 981468905 </p>
+            <p className="text-gray-400 mb-6">Email: aa.lopeza@ingesiboperu-sac.com</p>
 
             <div className="flex space-x-4">
               {socialMedia.map((social) => (
